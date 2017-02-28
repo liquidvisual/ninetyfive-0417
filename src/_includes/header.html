@@ -1,0 +1,26 @@
+{% assign settings = site.data.settings %}
+{% assign logo = "/assets/img/content/logo-type.svg" %}
+
+<div class="container">
+
+    <!-- LOGO -->
+    <a class="logo" href="/" title="{{ settings.title_homepage }}" itemprop="url">
+        <img src="{{ logo }}" alt="{{ settings.company }}" itemprop="logo">
+    </a>
+
+    <!-- HAMBURGER -->
+    <div class="global-header-hamburger hidden-xl-up">
+        <div class="lv-hamburger" data-menu-toggle>
+            <span class="lv-hamburger-top"></span>
+            <span class="lv-hamburger-middle"></span>
+            <span class="lv-hamburger-bottom"></span>
+            <span class="lv-hamburger-hit"></span>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="lv-topbar hidden-lg-down">
+        {% include snippets/navigation.html %}
+    </nav>
+
+</div>

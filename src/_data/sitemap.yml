@@ -1,0 +1,14 @@
+- title: Home
+  url: '#home'
+
+- title: Us
+  url: '#us'
+
+- title: Price
+  url: '#price'
+
+- title: Promotions
+  url: '#promotions'
+
+- title: Contact Us
+  url: '#contact-us'

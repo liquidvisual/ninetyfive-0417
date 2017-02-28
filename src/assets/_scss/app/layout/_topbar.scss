@@ -1,0 +1,211 @@
+/*
+    TOPBAR.CSS
+
+    - Last updated: 25.02.17
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+// TOPBAR
+//-----------------------------------------------------------------
+
+.lv-topbar {
+    margin: auto -15px auto auto;
+    // margin-top: 30px;
+    transition: margin 300ms ease;
+}
+
+//-----------------------------------------------------------------
+// GENERAL UL
+//-----------------------------------------------------------------
+
+.lv-topbar ul {
+    padding: 0; // reset
+    margin: 0; // reset
+    list-style: none; // reset
+    font-family: $font-family-serif;
+    font-size: rem-calc(24);
+    // font-weight: 600;
+    text-transform: lowercase;
+}
+
+//=========================================
+// TOP PARENT UL
+//=========================================
+
+.lv-topbar > ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    > li {
+        position: relative; // [LOCKED]
+        margin: 0; // reset
+    }
+}
+
+//-----------------------------------------------------------------
+// ALL ANCHORS (INCL. DROPDOWN CHILDREN)
+//-----------------------------------------------------------------
+
+.lv-topbar a {
+    display: block; // [LOCKED]
+    padding: rem-calc(10 15);
+    color: $body-color;
+}
+
+//-----------------------------------------------------------------
+// TOP PARENT ANCHORS (VISIBLE)
+//-----------------------------------------------------------------
+
+.lv-topbar .top-parent-anchor {
+    display: block; // [LOCKED]
+    padding: rem-calc(0 15);
+    line-height: rem-calc(44);
+    color: #B1B1B1;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+
+    &:hover {
+        background-color: rgba(black, 0.3);
+        color: white;
+    }
+
+    // Optional
+    &:hover > .text {
+        border-bottom: none !important;
+    }
+}
+
+//=========================================
+// ACTIVE TOP PARENT ANCHOR (OPTIONAL)
+//=========================================
+
+// .lv-topbar .active .top-parent-anchor .text {
+//     border-bottom: 2px solid $brand-primary;
+//     padding-bottom: 3px;
+// }
+
+.lv-topbar .active .top-parent-anchor {
+    color: white;
+}
+
+//-----------------------------------------------------------------
+// DROPDOWN ANCHORS
+//-----------------------------------------------------------------
+
+.lv-topbar .has-dropdown:hover > .top-parent-anchor {
+    background: rgba(black, 0.3);
+    color: white;
+}
+
+.lv-topbar .active.has-dropdown:hover > .top-parent-anchor .text {
+    border: 0;
+}
+
+// UX decision, dropdowns are fiddly on tablets
+.lv-topbar .has-dropdown:hover > .dropdown {
+    @include media-breakpoint-up(xl) {
+        opacity: 1;
+        height: auto;
+        overflow: visible;
+        visibility: visible;
+    }
+}
+
+//=========================================
+// ACTIVE STATE (OPTIONAL)
+//=========================================
+
+// .lv-topbar .has-dropdown.active:hover > .top-parent-anchor {
+//     background: $top-parent-anchor-bg-color;
+// }
+
+//=========================================
+// THIRD LEVEL
+//=========================================
+
+.lv-topbar .dropdown .has-dropdown:hover > .dropdown {
+    @include media-breakpoint-up(xl) {
+        opacity: 1;
+        height: auto;
+        visibility: visible;
+    }
+}
+
+//-----------------------------------------------------------------
+// DROPDOWNS
+//-----------------------------------------------------------------
+
+.lv-topbar .dropdown {
+    display: none; // OPT IN DESIGN
+    position: absolute;
+    top: auto;
+    left: 0;
+    width: rem-calc(240);
+    height: 0; // so hit areas aren't triggered
+    overflow: hidden; // so hit areas aren't triggered
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease, visibility 200ms ease;
+}
+
+// Prevent far-right dropdown from exceeding page width
+.lv-topbar .has-dropdown-right-aligned .dropdown {
+    right: 0;
+    left: auto;
+}
+
+.lv-topbar .dropdown.is-nav-included {
+    display: block;
+}
+
+//=========================================
+// THIRD LEVEL
+//=========================================
+
+.lv-topbar .dropdown .dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+// Prevent far-right 'nested' dropdown from exceeding page width
+.lv-topbar .has-dropdown-right-aligned .dropdown .dropdown {
+    left: -100%;
+}
+//=========================================
+// DROPDOWN LIST + ANCHORS
+//=========================================
+
+.lv-topbar .dropdown li a {
+    transition: none; // UX decision
+    font-size: rem-calc(13); // opinionated
+    color: $body-color;
+    // padding: rem-calc(15 15);
+}
+//=========================================
+// DROPDOWN ANCHOR BORDERS
+//=========================================
+
+.lv-topbar .dropdown a {
+    border-bottom: 1px solid rgba(black, 0.1);
+}
+
+.lv-topbar .dropdown li:last-child a {
+    border-bottom: 0;
+}
+//=========================================
+// DROPDOWN ANCHOR HOVERS
+//=========================================
+
+.lv-topbar .dropdown a:hover {
+    background-color: rgba(black, 0.1);
+    border-color: transparent;
+}
+//=========================================
+//
+//=========================================

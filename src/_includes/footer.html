@@ -1,0 +1,30 @@
+{% assign settings = site.data.settings %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="global-footer-left">
+				<a href="{{ settings.instagram }}"><i class="fa fa-instagram"></i></a>
+				<p>{{ settings.offices[0].address }}
+				phone <a href="tel:{{ settings.offices[0].phone }}">{{ settings.offices[0].phone }}</a> / <a href="mailto:{{ settings.offices[0].email }}">{{ settings.offices[0].email }}</a></p>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<p>woooo</p>
+		</div>
+	</div>
+</div>
+
+{% comment %}
+<div class="row">
+	<div class="col-8">
+		<p>sun and mon closed<br>
+		   tues 9am, late night by appointment<br>
+		   wed 9am - 5.30pm | thurs 9am - 5.30pm<br>
+		   fri 9am - 5.30pm  | sat 9am - 4pm</p>
+	</div>
+	<div class="col-4">
+		<a href="/"><img class="logo" src="/assets/img/content/logo-light@2x.png" alt="Logo"></a>
+	</div>
+</div>
+{% endcomment %}

@@ -1,0 +1,113 @@
+/*
+    SECTIONS.CSS
+
+    - Last updated: 27.02.17
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------
+
+.section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    padding: rem-calc(124 0);
+}
+
+//-----------------------------------------------------------------
+// US
+//-----------------------------------------------------------------
+
+.section-us {
+    background-color: black;
+    background-image: url(/assets/img/layout/bg-1.png);
+    // background-attachment: fixed;
+    color: white;
+}
+
+//-----------------------------------------------------------------
+// PRICE
+//-----------------------------------------------------------------
+
+.section-price {
+    background-image: url(/assets/img/layout/bg-2.jpg);
+    // background-attachment: fixed;
+    min-height: 0;
+
+    .row > div {
+        // background: green;
+        display: flex;
+        flex-direction: column;
+        padding: rem-calc(10);
+    }
+
+    .price-board {
+        padding: rem-calc(30 15);
+        background: rgba(white, 0.33);
+        flex-grow: 1;
+        // align-items: stretch;
+        margin-bottom: rem-calc(20);
+
+        &.is-short {
+            flex-grow: 0;
+        }
+    }
+
+    .affiliates {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        @include media-breakpoint-up(xl) {
+            top: rem-calc(80);
+        }
+
+        a {
+            margin: rem-calc(0 15);
+        }
+    }
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+//-----------------------------------------------------------------
+// PROMOTIONS
+//-----------------------------------------------------------------
+
+.section-promotions {
+    background-image: url(/assets/img/layout/bg-3.jpg);
+    // background-attachment: fixed;
+    min-height: 120vh;
+    z-index: 1;
+
+    &:after {
+        @include media-breakpoint-up(xl) {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(black, 0.57);
+            z-index: -1;
+        }
+    }
+
+    .logo {
+        width: rem-calc(92);
+    }
+}
+
+//=========================================
+//
+//=========================================

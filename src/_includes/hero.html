@@ -1,0 +1,68 @@
+{% comment %}
+    LIQUIDVISUAL-HERO
+
+    - updated: 26.02.17
+    - notes:
+        * Multiple items in carousel_slides.yml triggers carousel mode
+        * .has-auto-height - caption will detemine height
+        * .has-fixed-height - used for internal pages to set a height
+{% endcomment %}
+
+{% assign hero_images = site.data.carousel_slides %}
+
+<div class="lv-hero-wrapper">
+
+    <!-- LOGO -->
+    <div class="container">
+        <img class="logo" src="/assets/img/content/logo-dark@2x.png" alt="Station 95">
+    </div>
+
+    <!-- HERO -->
+    <div class="lv-hero">
+
+        {% for hero in hero_images %}
+
+            <!-- HERO ITEM -->
+            <div class="lv-hero-item" style="background-image: url('{{ hero.image }}')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-xl-6">
+                            <div class="lv-hero-item-caption animated fadeInLeft">
+
+                                <p>sun and mon closed<br>
+                                   tues 9am, late night by appointment<br>
+                                   wed 9am - 5.30pm | thurs 9am - 5.30pm<br>
+                                   fri 9am - 5.30pm  | sat 9am - 4pm</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </div> <!-- /.lv-hero -->
+
+   {% comment %}
+    <!-- CAROUSEL CONTROLS -->
+    <div class="lv-hero-carousel-controls">
+        <div class="container">
+            <span href="#" class="lv-hero-carousel-prev-btn"><i class="fa fa-angle-left"></i></span>
+            <span href="#" class="lv-hero-carousel-next-btn"><i class="fa fa-angle-right"></i></span>
+        </div>
+    </div>
+    {% endcomment %}
+
+    {% comment %}
+    <!-- CAROUSEL BULLETS -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="lv-hero-carousel-bullets"></div>
+            </div>
+        </div>
+    </div>
+    {% endcomment %}
+
+</div> <!-- /.lv-hero-wrapper -->

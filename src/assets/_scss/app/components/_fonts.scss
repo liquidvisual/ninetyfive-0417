@@ -1,0 +1,37 @@
+/*
+    FONTS.CSS
+
+    - Last updated: 27.02.17
+
+    This CSS resource incorporates links to font software which is the valuable copyrighted
+    property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+    redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+    Imaging with any questions regarding Web Fonts:  http://www.fonts.com
+*/
+//-----------------------------------------------------------------
+// VARIABLES
+//-----------------------------------------------------------------
+
+$font-path: "/assets/fonts" !default;
+
+//=========================================
+// Linotype Didot W01 Roman
+//=========================================
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=e2220a55-59ce-48af-b270-87bba101a7be");
+
+@font-face{
+    font-family: 'Didot';
+    // font-style: normal;
+    // font-weight: 300;
+    src: url('#{$font-path}/dd077a5a-5331-4833-8a24-e3afbe24d92e.eot?#iefix') format('eot');
+    src: local('☺'),
+         url('#{$font-path}/ca8dded6-b7b2-4d3c-b45e-a32de5023d4d.woff2') format('woff2'),
+         url('#{$font-path}/8cf278e2-5b07-4c21-97da-4762c9ea76c1.woff') format('woff'),
+         url('#{$font-path}/488ffbea-dc53-43b4-a9e2-d5bff132a85d.ttf') format('truetype'),
+         url('#{$font-path}/972bb961-7f13-4e8d-8c1f-034e3f4e7517.svg#972bb961-7f13-4e8d-8c1f-034e3f4e7517') format('svg');
+}
+
+//-----------------------------------------------------------------
+//
+//-----------------------------------------------------------------

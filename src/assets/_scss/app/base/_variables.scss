@@ -1,0 +1,27 @@
+/*
+    VARIABLES.CSS
+
+    - Last updated: 27.02.17
+    - liquidvisual.com
+*/
+//-----------------------------------------------------------------
+// GLOBAL VARS (USE PIXELS)
+//-----------------------------------------------------------------
+
+$fa-font-path: "/assets/fonts";
+$header-sm-height: 60px; // optimal
+$header-md-height: 70px;
+$header-lg-height: 70px;
+
+//-----------------------------------------------------------------
+// HERO
+//-----------------------------------------------------------------
+
+$hero-sm-height:            auto; // IMPORTANT: if carousel slides, you need a fixed height
+$hero-md-height:            rem-calc(575);
+$hero-md-height-fixed:      rem-calc(575);
+$hero-lg-height:            100vh;
+
+//=========================================
+//
+//=========================================

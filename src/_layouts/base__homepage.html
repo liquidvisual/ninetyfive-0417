@@ -1,0 +1,167 @@
+---
+layout: base
+---
+
+{% assign settings = site.data.settings %}
+{% assign featured = site.data.sitemap[3].children | where: "featured", true %}
+
+{% include hero.html %}
+
+<!-- US -->
+<section id="us" class="section section-us">
+
+	<ul class="block-grid-xs-1">
+		<li><img width="90" src="/assets/img/content/thumb-1.jpg" alt="Thumbnail"></li>
+		<li><img width="90" src="/assets/img/content/thumb-2.jpg" alt="Thumbnail"></li>
+		<li><img width="90" src="/assets/img/content/thumb-3.jpg" alt="Thumbnail"></li>
+		<li><img width="90" src="/assets/img/content/thumb-4.jpg" alt="Thumbnail"></li>
+		<li><img width="90" src="/assets/img/content/thumb-5.jpg" alt="Thumbnail"></li>
+	</ul>
+
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-md-10">
+				<div class="row">
+					<div class="col-md-4">
+						<img width="100%" src="/assets/img/content/maria-and-kris.jpg" alt="Maria and Kris">
+					</div>
+					<div class="col-md-8">
+						<h2>Maria &amp; Kris</h2>
+						<h3>Salon Directors</h3>
+						<br>
+						<p class="lead">We take the utmost care with your hair by using the finest products available. Our highly trained team are comitted to excellence, offering professional advice and services. We guarantee our service.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- PRICE -->
+<section id="price" class="section section-price">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-xl-3">
+				<div class="price-board">
+					<h3>Colour</h3>
+					<h4>Permanent</h4>
+					<h5>Re touch <span class="float-right"><span class="text">from</span><span class="number">70</span></span></h5>
+					<h6>Extra Long <span class="float-right"><span class="text">from</span><span class="number">100</span></span></h6>
+					<h6>Lumina Re touch <span class="float-right"><span class="text">from</span><span class="number">80</span></span></h6>
+					<h6>Lumina Extra Long <span class="float-right"><span class="text">from</span><span class="number">110</span></span></h6>
+					<br>
+
+					<h5>Re touch + Gloss<span class="float-right"><span class="text">from</span><span class="number">70</span></span></h5>
+					<h6>Extra Long <span class="float-right"><span class="text">from</span><span class="number">100</span></span></h6>
+					<h6>Lumina Re touch <span class="float-right"><span class="text">from</span><span class="number">80</span></span></h6>
+					<h6>Lumina Extra Long <span class="float-right"><span class="text">from</span><span class="number">110</span></span></h6>
+					<br>
+
+					<h5>Gloss color <span class="float-right"><span class="text">from</span><span class="number">70</span></span></h5>
+					<h6>Extra Long <span class="float-right"><span class="text">from</span><span class="number">100</span></span></h6>
+					<h6>Lumina Re touch <span class="float-right"><span class="text">from</span><span class="number">80</span></span></h6>
+					<h6>Lumina Extra Long <span class="float-right"><span class="text">from</span><span class="number">110</span></span></h6>
+
+				</div>
+			</div>
+			<div class="col-lg-6 col-xl-3">
+				<div class="price-board">
+					<h3>Colour</h3>
+					<h4>Foils</h4>
+					<h5>Top foils <span class="float-right"><span class="text">from</span><span class="number">58</span></span></h5>
+					<h5>Part <span class="float-right"><span class="text">from</span><span class="number">70</span></span></h5>
+					<h5>Half <span class="float-right"><span class="text">from</span><span class="number">80</span></span></h5>
+					<h5>Full <span class="float-right"><span class="text">from</span><span class="number">130</span></span></h5>
+					<h5>Streaks <span class="float-right"><span class="text">from</span><span class="number">77</span></span></h5>
+					<br>
+
+					<h4>Creative colour</h4>
+					<h5>(Free hand balayage ombre)</h5>
+					<h5>Short <span class="float-right"><span class="text">from</span><span class="number">70</span></span></h5>
+					<h5>Medium <span class="float-right"><span class="text">from</span><span class="number">80</span></span></h5>
+					<h5>Long <span class="float-right"><span class="text">from</span><span class="number">110</span></span></h5>
+					<br>
+
+					<h4>Toner <span class="float-right"><span class="text">from</span><span class="number">40</span></span></h4>
+					<br>
+
+					<h4>Treatments <span class="float-right"><span class="text">from</span><span class="number">36</span></span></h4>
+					<h6>Kerestase hair treatment</h6>
+				</div>
+			</div>
+			<div class="col-lg-6 col-xl-3">
+				<div class="price-board">
+					<h3>Cut</h3>
+					<h4>Women</h4>
+					<h5>Shampoo &amp; Cut <span class="float-right"><span class="text">from</span><span class="number">58</span></span></h5>
+					<h5>Restyle <span class="float-right"><span class="text">from</span><span class="number">88</span></span></h5>
+					<br>
+
+					<h4>Shampoo, cut &amp; style</h4>
+					<h5>Short &amp; Cut <span class="float-right"><span class="text">from</span><span class="number">58</span></span></h5>
+					<h5>Medium <span class="float-right"><span class="text">from</span><span class="number">68</span></span></h5>
+					<h5>Long <span class="float-right"><span class="text">from</span><span class="number">78</span></span></h5>
+					<br>
+
+					<h4>Girls</h4>
+					<h5>under 12 years <span class="float-right"><span class="text">from</span><span class="number">36</span></span></h5>
+					<h5>over 12 years <span class="float-right"><span class="text">from</span><span class="number">47</span></span></h5>
+					<br>
+
+					<h4>Men</h4>
+					<h5>Shampoo &amp; Cut <span class="float-right"><span class="text">from</span><span class="number">33</span></span></h5>
+					<br>
+
+					<h4>Boys</h4>
+					<h5>under 12 years <span class="float-right"><span class="text">from</span><span class="number">33</span></span></h5>
+				</div>
+			</div>
+			<div class="col-lg-6 col-xl-3">
+				<div class="price-board is-short">
+					<h3>Style</h3>
+					<h4>Women</h4>
+					<h5>Short <span class="float-right"><span class="text">from</span><span class="number">40</span></span></h5>
+					<h5>Medium <span class="float-right"><span class="text">from</span><span class="number">48</span></span></h5>
+					<h5>Long <span class="float-right"><span class="text">from</span><span class="number">58</span></span></h5>
+					<h5>Extra Long <span class="float-right"><span class="text">from</span><span class="number">68</span></span></h5>
+					<h5>Thermal <span class="float-right"><span class="text">from</span><span class="number">36</span></span></h5>
+					<h5>Up do <span class="float-right"><span class="text">from</span><span class="number">95</span></span></h5>
+					<br>
+
+					<h4>Bridal <span class="float-right"><span class="text">from</span><span class="number">110</span></span></h4>
+				</div>
+				<div class="price-board is-short">
+					<h3>Prices</h3>
+					<!-- <p>Prices Colour prices are based on a combination of time required and the amount of product used during the service. The amount of product used can vary pending length and density of hair. A more accurate price will be provided upon consultation.</p> -->
+				</div>
+			</div>
+		</div>
+
+		<!-- AFFILIATES -->
+		<div class="affiliates">
+			<a href="#"><img width="70" src="/assets/img/content/affiliate-1@2x.png" alt="Wella"></a>
+			<a href="#"><img width="75" src="/assets/img/content/affiliate-2@2x.png" alt="Wella"></a>
+			<a href="#"><img width="100" src="/assets/img/content/affiliate-3@2x.png" alt="Wella"></a>
+		</div>
+
+	</div>
+</section>
+
+<!-- PROMOTIONS -->
+<section id="promotions" class="section section-promotions">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 text-center">
+				<h2>Special Offer</h2>
+				<h3><span class="dollar-sign">$</span>40 <span class="asterisk">*</span><br>
+				Blow Dry</h3>
+				<h4>Wednesday and Thursday<br>
+				*Receive a FREE Kerastase Treatment<br>
+				Any length hair</h4>
+			</div>
+			<div class="col-md-6">
+				<p class="text-right"><img width="406" src="/assets/img/content/promotion.jpg" alt="Promotion"></p>
+			</div>
+		</div>
+	</div>
+</section>
