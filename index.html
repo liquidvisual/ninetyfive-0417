@@ -51,7 +51,7 @@
                 </div>
 
                 <!-- NAVIGATION -->
-                <nav class="lv-topbar hidden-lg-down">
+                <nav class="lv-topbar hidden-lg-down" data-scroll-highlight>
                     <ul>
                         <li class="active">
                             <a class="top-parent-anchor" href="#home">
@@ -82,39 +82,64 @@
                 </nav>
             </div>
         </header>
+        <div class="lv-hero-wrapper">
 
-        <!-- { % include hero.html %} -->
+            <!-- LOGO -->
+            <div class="container">
+                <img class="logo" src="/assets/img/content/logo-dark@2x.png" alt="Station 95">
+            </div>
+
+            <!-- HERO -->
+            <div class="lv-hero">
+
+                <!-- HERO ITEM -->
+                <div class="lv-hero-item" style="background-image: url('/assets/img/content/hero-1.jpg')">
+                    <div class="container">
+                        <div class="lv-hero-item-caption animated fadeInLeft">
+                            <p>sun and mon closed
+                                <br>tues 9am, late night by appointment
+                                <br>wed 9am - 5.30pm | thurs 9am - 5.30pm
+                                <br>fri 9am - 5.30pm | sat 9am - 4pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.lv-hero -->
+            </div>
+
+        <!-- /.lv-hero-wrapper -->
         
-<!-- US --><section id="us" class="section section-us" hidden>
-            <ul class="block-grid-xs-1">
+<!-- US --><section id="us" class="section section-us">
+            <ul class="hair-thumbs block-grid-md-1 hidden-sm-down">
                 <li>
-                    <img width="90" src="/assets/img/content/thumb-1.jpg" alt="Thumbnail">
+                    <img width="100%" src="/assets/img/content/thumb-1.jpg" alt="Thumbnail">
                 </li>
                 <li>
-                    <img width="90" src="/assets/img/content/thumb-2.jpg" alt="Thumbnail">
+                    <img width="100%" src="/assets/img/content/thumb-2.jpg" alt="Thumbnail">
                 </li>
                 <li>
-                    <img width="90" src="/assets/img/content/thumb-3.jpg" alt="Thumbnail">
+                    <img width="100%" src="/assets/img/content/thumb-3.jpg" alt="Thumbnail">
                 </li>
                 <li>
-                    <img width="90" src="/assets/img/content/thumb-4.jpg" alt="Thumbnail">
+                    <img width="100%" src="/assets/img/content/thumb-4.jpg" alt="Thumbnail">
                 </li>
                 <li>
-                    <img width="90" src="/assets/img/content/thumb-5.jpg" alt="Thumbnail">
+                    <img width="100%" src="/assets/img/content/thumb-5.jpg" alt="Thumbnail">
                 </li>
             </ul>
             <div class="container">
                 <div class="row justify-content-md-center">
                     <div class="col-md-10">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img width="100%" src="/assets/img/content/maria-and-kris.jpg" alt="Maria and Kris">
-                            </div>
-                            <div class="col-md-8">
+                        <div class="row justify-content-md-center">
+                            <div class="mb-3 col-md-12 col-lg-7 push-lg-4 text-center text-lg-left">
                                 <h2>Maria &amp; Kris</h2>
                                 <h3>Salon Directors</h3>
                                 <br>
-                                <p class="lead">We take the utmost care with your hair by using the finest products available. Our highly trained team are comitted to excellence, offering professional advice and services. We guarantee our service.</p>
+                                <p>We take the utmost care with your hair by using the finest products available. Our highly trained team are comitted to excellence, offering professional advice and services. We guarantee our service.</p>
+                            </div>
+                            <div class="col-md-7 col-lg-4 pull-lg-8">
+                                <img width="100%" src="/assets/img/content/maria-and-kris.jpg" alt="Maria and Kris">
                             </div>
                         </div>
                     </div>
@@ -125,8 +150,9 @@
         <!-- PRICE -->
         <section id="price" class="section section-price">
             <div class="container">
+                <h2 class="text-center mb-4 hidden-xl-up">Prices</h2>
                 <div class="row">
-                    <div class="col-lg-6 col-xl-3">
+                    <div class="col-md-6 col-xl-3">
                         <div class="price-board">
                             <h3>H3. Colour</h3>
                             <br>
@@ -198,7 +224,7 @@
                             </h6>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-3">
+                    <div class="col-md-6 col-xl-3">
                         <div class="price-board">
                             <h3>H3. Colour</h3>
                             <br>
@@ -273,7 +299,7 @@
                             </h5>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-3">
+                    <div class="col-md-6 col-xl-3">
                         <div class="price-board">
                             <h3>H3. Cut</h3>
                             <br>
@@ -343,7 +369,7 @@
                             </h6>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-xl-3">
+                    <div class="col-md-6 col-xl-3">
                         <div class="price-board is-short">
                             <h3>H3. Style</h3>
                             <br>
@@ -415,22 +441,24 @@
         </section>
 
         <!-- PROMOTIONS -->
-        <section id="promotions" class="section section-promotions" hidden>
+        <section id="promotions" class="section section-promotions">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center">
+                <div class="row align-items-center text-center">
+                    <div class="col-lg-6">
                         <h2>Special Offer</h2>
                         <h3>
-                            <span class="dollar-sign">$</span>40
+                            <span class="dollar-sign">$</span>
+                            <span class="number">40</span>
                             <span class="asterisk">*</span>
                             <br>Blow Dry</h3>
-                        <h4>Wednesday and Thursday
+                        <p>Wednesday and Thursday
                             <br>*Receive a FREE Kerastase Treatment
-                            <br>Any length hair</h4>
+                            <br>Any length hair</p>
+                        <div class="spacer mb-3 hidden-lg-up"></div>
                     </div>
-                    <div class="col-md-6">
-                        <p class="text-right">
-                            <img width="406" src="/assets/img/content/promotion.jpg" alt="Promotion">
+                    <div class="col-lg-6">
+                        <p>
+                            <img class="supporting-image" width="100%" src="/assets/img/content/promotion.jpg" alt="Promotion">
                         </p>
                     </div>
                 </div>
@@ -438,31 +466,40 @@
         </section>
 
         <!-- FOOTER -->
-        <footer id="contact-us" class="global-footer" hidden>
+        <footer id="contact-us" class="global-footer">
             <div class="container">
                 <div class="row align-items-end">
-                    <div class="col-md-6">
-                        <div class="global-footer-top">
-                            <a href="http://instagram.com">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                            <p>95 walkerville terrace walkerville sa 5081
-                                <br>phone
-                                <a href="tel:08 8269 3981">08 8269 3981</a> /
-                                <a href="mailto:hello@station95.com.au">hello@station95.com.au</a>
-                            </p>
+                    <div class="col-lg-6">
+
+                        <!-- FOOTER TOP -->
+                        <div class="global-footer-top d-flex flex-column flex-md-row">
+                            <div class="order-md-last">
+                                <p>95 walkerville terrace walkerville sa 5081
+                                    <br>phone
+                                    <a href="tel:08 8269 3981">08 8269 3981</a> /
+                                    <a href="mailto:hello@station95.com.au">hello@station95.com.au</a>
+                                </p>
+                            </div>
+                            <div class="order-md-first">
+                                <a href="http://instagram.com">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
+
+                        <!-- FOOTER BOTTOM -->
                         <div class="global-footer-bottom">
-                            <div class="row">
-                                <div class="col-9">
+                            <div class="row align-items-end">
+                                <div class="col-md-10 d-flex justify-content-center">
                                     <p>sun and mon closed
                                         <br>tues 9am, late night by appointment
                                         <br>wed 9am - 5.30pm | thurs 9am - 5.30pm
                                         <br>fri 9am - 5.30pm | sat 9am - 4pm</p>
                                 </div>
-                                <div class="col-3">
+                                <div class="col-md-2 text-center text-md-right">
+                                    <div class="spacer mb-4 hidden-md-up"></div>
                                     <a class="logo" href="/">
                                         <img width="95" src="/assets/img/content/logo-light@2x.png" alt="Logo">
                                     </a>
