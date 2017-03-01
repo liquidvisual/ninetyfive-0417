@@ -10,6 +10,21 @@
 //-----------------------------------------------------------------
 // SPECIAL
 //-----------------------------------------------------------------
+
+// Bootstrap Alpha's docs are behind the implementation
+
+.order-md-last {
+	@include media-breakpoint-up(md) {
+	    order: 2;
+	}
+}
+
+.order-md-first {
+	@include media-breakpoint-up(md) {
+	    order: 1;
+	}
+}
+
 //=========================================
 //
 //=========================================

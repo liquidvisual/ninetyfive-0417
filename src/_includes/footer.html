@@ -1,30 +1,34 @@
 {% assign settings = site.data.settings %}
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-6">
-			<div class="global-footer-left">
-				<a href="{{ settings.instagram }}"><i class="fa fa-instagram"></i></a>
-				<p>{{ settings.offices[0].address }}
-				phone <a href="tel:{{ settings.offices[0].phone }}">{{ settings.offices[0].phone }}</a> / <a href="mailto:{{ settings.offices[0].email }}">{{ settings.offices[0].email }}</a></p>
+	<div class="row align-items-end">
+		<div class="col-lg-6">
+
+			<!-- FOOTER TOP -->
+			<div class="global-footer-top d-flex flex-column flex-md-row">
+				<div class="order-md-last">
+					<p>{{ settings.offices[0].address }}<br>
+					phone <a href="tel:{{ settings.offices[0].phone }}">{{ settings.offices[0].phone }}</a> / <a href="mailto:{{ settings.offices[0].email }}">{{ settings.offices[0].email }}</a></p>
+				</div>
+				<div class="order-md-first">
+					<a href="{{ settings.instagram }}"><i class="fa fa-instagram"></i></a>
+				</div>
 			</div>
 		</div>
-		<div class="col-md-6">
-			<p>woooo</p>
+		<div class="col-lg-6">
+
+			<!-- FOOTER BOTTOM -->
+			<div class="global-footer-bottom">
+				<div class="row align-items-end">
+					<div class="col-md-10 d-flex justify-content-xl-center">
+						{{ settings.offices[0].trading_hours }}
+					</div>
+					<div class="col-md-2 text-center text-md-right">
+						<div class="spacer mb-4 hidden-md-up"></div>
+						<a class="logo" href="/"><img width="95" src="/assets/img/content/logo-light@2x.png" alt="Logo"></a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
-
-{% comment %}
-<div class="row">
-	<div class="col-8">
-		<p>sun and mon closed<br>
-		   tues 9am, late night by appointment<br>
-		   wed 9am - 5.30pm | thurs 9am - 5.30pm<br>
-		   fri 9am - 5.30pm  | sat 9am - 4pm</p>
-	</div>
-	<div class="col-4">
-		<a href="/"><img class="logo" src="/assets/img/content/logo-light@2x.png" alt="Logo"></a>
-	</div>
-</div>
-{% endcomment %}

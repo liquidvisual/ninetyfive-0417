@@ -8,6 +8,8 @@
         * .has-fixed-height - used for internal pages to set a height
 {% endcomment %}
 
+{% assign settings = site.data.settings %}
+{% assign trading_hours = settings.offices[0].trading_hours  %}
 {% assign hero_images = site.data.carousel_slides %}
 
 <div class="lv-hero-wrapper">
@@ -25,17 +27,8 @@
             <!-- HERO ITEM -->
             <div class="lv-hero-item" style="background-image: url('{{ hero.image }}')">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-7 col-xl-6">
-                            <div class="lv-hero-item-caption animated fadeInLeft">
-
-                                <p>sun and mon closed<br>
-                                   tues 9am, late night by appointment<br>
-                                   wed 9am - 5.30pm | thurs 9am - 5.30pm<br>
-                                   fri 9am - 5.30pm  | sat 9am - 4pm</p>
-
-                            </div>
-                        </div>
+                    <div class="lv-hero-item-caption animated fadeInLeft">
+                        {{ trading_hours }}
                     </div>
                 </div>
             </div>

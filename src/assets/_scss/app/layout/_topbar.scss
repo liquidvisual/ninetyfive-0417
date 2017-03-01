@@ -65,7 +65,7 @@
     line-height: rem-calc(44);
     color: #B1B1B1;
     cursor: pointer;
-    transition: background-color 200ms ease;
+    transition: color 200ms ease, background-color 200ms ease;
 
     &:hover {
         background-color: rgba(black, 0.3);

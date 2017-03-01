@@ -12,16 +12,77 @@
 //-----------------------------------------------------------------
 
 .global-footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	// height: 100px;
 	left: 0;
-	// background: aqua;
-	// bottom: 0;
-
+	width: 100%;
+	padding: rem-calc(30 0);
+	background: black;
 	color: white;
 	z-index: 1;
+
+	p {
+		@include media-breakpoint-down(lg) {
+		    font-size: rem-calc(18);
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+	    position: absolute;
+	    bottom: 0;
+	    padding: rem-calc(25 0);
+	    background: rgba(black, 0.57);
+	}
+
+	@include media-breakpoint-up(xl) {
+	    padding: 0 0 10 0;
+	    background: none;
+	    // font-size: rem-calc(22);
+	}
+}
+
+//-----------------------------------------------------------------
+// FOOTER TOP
+//-----------------------------------------------------------------
+
+.global-footer-top {
+	color: white;
+	text-align: left;
+
+	a {
+		color: white;
+	}
+
+	.fa {
+		font-size: rem-calc(45);
+		margin: rem-calc(0 0 15 0);
+
+		@include media-breakpoint-up(md) {
+		    margin: rem-calc(13 20 0 0);
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+// FOOTER BOTTOM
+//-----------------------------------------------------------------
+
+.global-footer-bottom {
+
+	.logo {
+		position: relative;
+		top: rem-calc(-20);
+
+		@include media-breakpoint-up(xl) {
+		    top: rem-calc(-25);
+		}
+
+		img {
+			width: rem-calc(70);
+
+			@include media-breakpoint-up(xl) {
+			    width: rem-calc(95);
+			}
+		}
+	}
 }
 
 //=========================================

@@ -17,9 +17,9 @@ $header-lg-height: 70px;
 // HERO
 //-----------------------------------------------------------------
 
-$hero-sm-height:            auto; // IMPORTANT: if carousel slides, you need a fixed height
-$hero-md-height:            rem-calc(575);
-$hero-md-height-fixed:      rem-calc(575);
+$hero-sm-height:            100vh; // IMPORTANT: if carousel slides, you need a fixed height
+$hero-md-height:            100vh;
+$hero-md-height-fixed:      rem-calc(800);
 $hero-lg-height:            100vh;
 
 //=========================================

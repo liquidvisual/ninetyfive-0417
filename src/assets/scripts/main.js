@@ -71,6 +71,30 @@ $(function() {
         onNotBottom : function() {}
     });
 
+    //-----------------------------------------------------------------
+    // SCROLLTO ANYTHING WITH AN ID
+    // USAGE:
+    // pass #id as target - window will scroll to it
+    //-----------------------------------------------------------------
+
+    function scrollTo(target) {
+        var href = target,
+            offsetTop = href === "#" ? 0 : $(href).offset().top;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 800);
+        return false;
+    }
+
+    //==================================================
+    // PLACE ON CLICKS
+    //==================================================
+
+    $('a[href*="#"]:not([href="#"])').click(function(event) {
+        event.preventDefault();
+        scrollTo($(this).attr('href'));
+    });
+
 //--
 });
 

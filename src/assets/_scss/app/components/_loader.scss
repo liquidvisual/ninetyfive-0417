@@ -18,9 +18,9 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #333333;
+	background: black;
 	z-index: 2147483647;
-    animation: page-loader-fadeout 1s ease 1.2s alternate 1 forwards;
+    animation: page-loader-fadeout 1s ease 0.6s alternate 1 forwards;
 }
 
 //-----------------------------------------------------------------
@@ -53,6 +53,8 @@ html[data-dev-mode] .lv-page-loader {
     width: 60px;
     height: 60px;
     margin: auto;
+
+    display: none;
 }
 
 //-----------------------------------------------------------------

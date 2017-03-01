@@ -21,7 +21,7 @@ html, body {
 
 .lv-page {
 	@include media-breakpoint-down(sm) {
-	    padding-top: $header-sm-height;
+	    // padding-top: $header-sm-height;
 	}
 }
 
