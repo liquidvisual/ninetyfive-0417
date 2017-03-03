@@ -13,7 +13,6 @@ $(function() {
 
     $(window).on('load', function() {
         $('html').addClass('has-loaded');
-        $('input, textarea').placeholder(); // IE9 Patch
     });
 
     //-----------------------------------------------------------------
@@ -70,6 +69,34 @@ $(function() {
         // callback when moving away from bottom of page, `this` is headroom object
         onNotBottom : function() {}
     });
+
+    //-----------------------------------------------------------------
+    // PARALLAX
+    //-----------------------------------------------------------------
+
+    // .parallax(xPosition, speedFactor, outerHeight) options:
+    // xPosition - Horizontal position of the element
+    // inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling,
+    // 2 is twice the speed of scrolling
+    // outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+
+    function parallax(){
+        $('.lv-hero-item').parallax("50%", 0.1);
+    }
+
+    // $(window).on('resize', function(){
+    //     if (($(window).width() >= 1260)) {
+    //         parallax();
+    //     } else {
+    //         parallax.destroy();
+    //     }
+    // });
+
+    if (($(window).width() >= 1260)) {
+        parallax();
+    }
+
+    // parallax();
 
     //-----------------------------------------------------------------
     // SCROLLTO ANYTHING WITH AN ID

@@ -3,13 +3,13 @@ layout: base
 ---
 
 {% assign settings = site.data.settings %}
-{% assign featured = site.data.sitemap[3].children | where: "featured", true %}
 
 {% include hero.html %}
 
 <!-- US -->
 <section id="us" class="section section-us">
 
+	<!-- DECORATIVE THUMBS -->
 	<ul class="hair-thumbs block-grid-md-1 hidden-sm-down">
 		<li><img width="100%" src="/assets/img/content/thumb-1.jpg" alt="Thumbnail"></li>
 		<li><img width="100%" src="/assets/img/content/thumb-2.jpg" alt="Thumbnail"></li>
@@ -146,7 +146,6 @@ layout: base
 <!-- PROMOTIONS -->
 <section id="promotions" class="section section-promotions">
 	<div class="container">
-
 		<div class="row align-items-center text-center">
 			<div class="col-lg-6">
 				<h2>Special Offer</h2>
@@ -161,8 +160,5 @@ layout: base
 				<p><img class="supporting-image" width="100%" src="/assets/img/content/promotion.jpg" alt="Promotion"></p>
 			</div>
 		</div>
-
 	</div>
 </section>
-
-

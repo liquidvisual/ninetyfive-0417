@@ -9,14 +9,14 @@
 {% endcomment %}
 
 {% assign settings = site.data.settings %}
-{% assign trading_hours = settings.offices[0].trading_hours  %}
+{% assign trading_hours = settings.offices[0].trading_hours %}
 {% assign hero_images = site.data.carousel_slides %}
 
 <div class="lv-hero-wrapper">
 
     <!-- LOGO -->
     <div class="container">
-        <img class="logo" src="/assets/img/content/logo-dark@2x.png" alt="Station 95">
+        <img class="logo" src="/assets/img/content/logo-dark@2x.png" alt="{{ settings.company }}">
     </div>
 
     <!-- HERO -->
@@ -26,36 +26,17 @@
 
             <!-- HERO ITEM -->
             <div class="lv-hero-item" style="background-image: url('{{ hero.image }}')">
-                <div class="container">
-                    <div class="lv-hero-item-caption animated fadeInLeft">
-                        {{ trading_hours }}
-                    </div>
-                </div>
             </div>
 
         {% endfor %}
 
     </div> <!-- /.lv-hero -->
-
-   {% comment %}
-    <!-- CAROUSEL CONTROLS -->
-    <div class="lv-hero-carousel-controls">
-        <div class="container">
-            <span href="#" class="lv-hero-carousel-prev-btn"><i class="fa fa-angle-left"></i></span>
-            <span href="#" class="lv-hero-carousel-next-btn"><i class="fa fa-angle-right"></i></span>
-        </div>
-    </div>
-    {% endcomment %}
-
-    {% comment %}
-    <!-- CAROUSEL BULLETS -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="lv-hero-carousel-bullets"></div>
-            </div>
-        </div>
-    </div>
-    {% endcomment %}
-
 </div> <!-- /.lv-hero-wrapper -->
+
+{% comment %}
+    <div class="container">
+        <div class="lv-hero-item-caption animated fadeInLeft">
+            {{ trading_hours }}
+        </div>
+    </div>
+{% endcomment %}

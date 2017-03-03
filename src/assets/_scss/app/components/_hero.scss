@@ -95,6 +95,10 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
     background-position: center center;
     background-size: cover;
 
+    @include media-breakpoint-up(xl) {
+        background-attachment: fixed;
+    }
+
     > .container {
         align-self: flex-end;
     }

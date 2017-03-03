@@ -17,11 +17,18 @@
     align-items: center;
     min-height: 100vh;
     background-size: cover;
-    background-position: center center;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
     padding: rem-calc(50 0);
 
     @include media-breakpoint-up(xl) {
         padding: rem-calc(124 0);
+    }
+}
+
+.section {
+    @include media-breakpoint-up(xl) {
+        background-attachment: fixed;
     }
 }
 
@@ -32,7 +39,6 @@
 .section-us {
     background-color: black;
     background-image: url(/assets/img/layout/bg-1.png);
-    // background-attachment: fixed;
     color: white;
 
     .hair-thumbs {
@@ -66,8 +72,6 @@
 
 .section-price {
     background-image: url(/assets/img/layout/bg-2.jpg);
-    // background-attachment: fixed;
-    // min-height: 0;
 
     .container {
         max-width: calc(1234px);
@@ -147,7 +151,8 @@
 
     @include media-breakpoint-up(xl) {
         align-items: center;
-        min-height: 130vh;
+        min-height: 150vh;
+        align-items: flex-start;
     }
 
     &:after {
