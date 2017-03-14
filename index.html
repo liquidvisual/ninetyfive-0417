@@ -23,7 +23,12 @@
 
     <!-- WON'T SHOW IF JAVASCRIPT IS DISABLED -->
     <script>
-    document.getElementById('lv-page-loader').style.display = 'flex';
+    var loader = document.getElementById('lv-page-loader');
+    loader.style.display = 'flex';
+    // Prevent loader from getting stuck if body takes too long
+    setTimeout(function() {
+        loader.className += ' has-loaded';
+    }, 1000);
     </script>
     <div id="home" class="lv-page">
 
