@@ -137,6 +137,7 @@
 
 .section-promotions {
     background-image: url(/assets/img/layout/bg-3.jpg);
+    background-position: bottom center;
     // background-attachment: fixed;
     align-items: flex-start;
     z-index: 1;
@@ -155,6 +156,7 @@
         align-items: flex-start;
     }
 
+    &:before,
     &:after {
         content: "";
         position: absolute;
@@ -168,6 +170,16 @@
         @include media-breakpoint-up(xl) {
             width: 51%;
             background: rgba(black, 0.57);
+        }
+    }
+
+    &:before {
+        width: 100%;
+        background: rgba(#f7f7f9, 0.5);
+        height: calc(100% - 230px);
+
+        @include media-breakpoint-down(lg) {
+            background: none;
         }
     }
 
