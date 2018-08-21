@@ -1,5 +1,5 @@
 /*
-    MAIN.JS - Last updated: 11.05.17
+    MAIN.JS - Last updated: 21.08.18
 */
 //-----------------------------------------------------------------
 // WINDOW LOAD
@@ -74,8 +74,10 @@ $(".global-header").headroom({
 // 2 is twice the speed of scrolling
 // outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
 
+// switching off hero and onto next section - 21.08.18
+
 function parallax(){
-    $('.lv-hero-item').parallax("50%", 0.1);
+    $('.section-us').parallax("50%", 0.1);
 }
 
 // $(window).on('resize', function(){
@@ -89,6 +91,7 @@ function parallax(){
 if (($(window).width() >= 1260)) {
     parallax();
 }
+
 
 // parallax();
 

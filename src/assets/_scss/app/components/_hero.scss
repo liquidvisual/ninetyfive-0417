@@ -1,7 +1,7 @@
 /*
     HERO.CSS
 
-    - updated: 26.03.17
+    - updated: 21.08.18
     - notes:
         * liquidvisual recommends bxSlider for hero carousels
         * fixed overflow problem when removing JS
@@ -42,6 +42,7 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
     // width: 100%; // added last minute - breaking?
     overflow: hidden; // causes problems without JS
     height: $hero-sm-height;
+    background-color: black;
 
     @include media-breakpoint-up(md) {
         height: $hero-md-height;
@@ -100,7 +101,7 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
     }
 
     > .container {
-        align-self: flex-end;
+        align-self: center;
     }
 }
 
@@ -109,67 +110,70 @@ $hero-carousel-bullet-size: rem-calc(16)  !default;
 //-----------------------------------------------------------------
 
 .lv-hero-item-caption {
-    // display: inline-block;
-    // width: 100%;
-    margin: rem-calc(50 0);
-    color: white;
-    // font-size: rem-calc(22);
-    text-shadow: -2px -2px 3px rgba(black, 1);
+    text-align: center;
+
+    h1 {
+        margin-bottom: rem-calc(50);
+    }
+
+    img {
+        max-width: 775px; // [LOCKED]
+    }
 }
 
 //-----------------------------------------------------------------
 // CAROUSEL CONTROLS
 //-----------------------------------------------------------------
 
-.lv-hero-carousel-controls {
-    position: absolute;
-    top: 44%;
-    width: 100%;
-    height: 0;
-    z-index: 100;
+// .lv-hero-carousel-controls {
+//     position: absolute;
+//     top: 44%;
+//     width: 100%;
+//     height: 0;
+//     z-index: 100;
 
-    > .container {
-        position: relative;
-    }
+//     > .container {
+//         position: relative;
+//     }
 
     //=========================================
     // NEXT / PREV BUTTONS
     //=========================================
 
-    .lv-hero-carousel-prev-btn,
-    .lv-hero-carousel-next-btn {
-        position: absolute;
-        width: rem-calc(50);
-        height: rem-calc(50);
-        line-height: rem-calc(50);
-        cursor: pointer;
-        text-align: center;
-        font-family: "FontAwesome";
-        font-size: rem-calc(50);
-        display: none;
+//     .lv-hero-carousel-prev-btn,
+//     .lv-hero-carousel-next-btn {
+//         position: absolute;
+//         width: rem-calc(50);
+//         height: rem-calc(50);
+//         line-height: rem-calc(50);
+//         cursor: pointer;
+//         text-align: center;
+//         font-family: "FontAwesome";
+//         font-size: rem-calc(50);
+//         display: none;
 
-        @include media-breakpoint-up(md) {
-            display: block;
-        }
+//         @include media-breakpoint-up(md) {
+//             display: block;
+//         }
 
-        a {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: inline-block;
-        }
-    }
+//         a {
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             width: 100%;
+//             height: 100%;
+//             display: inline-block;
+//         }
+//     }
 
-    .lv-hero-carousel-prev-btn {
-        left: $container-gutter/2;
-    }
+//     .lv-hero-carousel-prev-btn {
+//         left: $container-gutter/2;
+//     }
 
-    .lv-hero-carousel-next-btn {
-        right: $container-gutter/2;
-    }
-}
+//     .lv-hero-carousel-next-btn {
+//         right: $container-gutter/2;
+//     }
+// }
 
 //-----------------------------------------------------------------
 // CAROUSEL BULLETS

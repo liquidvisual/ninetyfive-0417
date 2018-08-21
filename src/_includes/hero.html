@@ -1,7 +1,7 @@
 {% comment %}
     LIQUIDVISUAL-HERO
 
-    - updated: 26.02.17
+    - updated: 21.08.18
     - notes:
         * Multiple items in carousel_slides.yml triggers carousel mode
         * .has-auto-height - caption will detemine height
@@ -14,10 +14,12 @@
 
 <div class="lv-hero-wrapper">
 
-    <!-- LOGO -->
-    <div class="container">
-        <img class="logo" src="/assets/img/content/logo-dark@2x.png" alt="{{ settings.company }}">
-    </div>
+    {% comment %}
+        <!-- LOGO -->
+        <div class="container">
+            <img class="logo" src="/assets/img/content/logo-dark@2x.png" alt="{{ settings.company }}">
+        </div>
+    {% endcomment %}
 
     <!-- HERO -->
     <div class="lv-hero">
@@ -26,17 +28,16 @@
 
             <!-- HERO ITEM -->
             <div class="lv-hero-item" style="background-image: url('{{ hero.image }}')">
+                <div class="container">
+                    <div class="lv-hero-item-caption animated fadeInLeft">
+                        <h1>
+                            <img width="100%" src="/assets/img/content/logo-type-large.svg" alt="Stationinetyfive">
+                        </h1>
+                    </div>
+                </div>
             </div>
 
         {% endfor %}
 
     </div> <!-- /.lv-hero -->
 </div> <!-- /.lv-hero-wrapper -->
-
-{% comment %}
-    <div class="container">
-        <div class="lv-hero-item-caption animated fadeInLeft">
-            {{ trading_hours }}
-        </div>
-    </div>
-{% endcomment %}
